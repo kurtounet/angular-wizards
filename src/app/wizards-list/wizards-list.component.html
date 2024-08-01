@@ -1,0 +1,63 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let character of charactersCollection">
+      <div class="card" style="width: 24rem;">
+        <img class="card-img-top" [src]="character.image" [alt]="character.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ character.name }}</h5>
+          <div class="card-text">
+            <strong>Alternate Names:</strong> {{ character.alternate_names.join(', ') }}<br>
+            <strong>Species:</strong> {{ character.species }}<br>
+            <strong>Gender:</strong> {{ character.gender }}<br>
+            <strong>House:</strong> {{ character.house }}<br>
+            <strong>Date of Birth:</strong> {{ character.dateOfBirth }}<br>
+            <strong>Ancestry:</strong> {{ character.ancestry }}<br>
+            <strong>Eye Colour:</strong> {{ character.eyeColour }}<br>
+            <strong>Hair Colour:</strong> {{ character.hairColour }}<br>
+            <strong>Wand:</strong> {{ character.wand.wood }}, {{ character.wand.core }}, {{ character.wand.length }}<br>
+            inches
+            <strong>Patronus:</strong> {{ character.patronus }}<br>
+            <strong>Hogwarts Student:</strong> {{ character.hogwartsStudent ? 'Yes' : 'No' }}<br>
+            <strong>Hogwarts Staff:</strong> {{ character.hogwartsStaff ? 'Yes' : 'No' }}<br>
+            <strong>Actor:</strong> {{ character.actor }}<br>
+            <strong>Alive:</strong> {{ character.alive ? 'Yes' : 'No' }}<br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<div class="container">
+  <p>{{messageError}}</p>
+  <div class="row">
+    <!-- <div class="col" *ngFor="let character of charactersCollection$" async; track $index> 
+      | async
+    -->
+    @for (character of charactersCollection ; track $index){
+    <div class="col">
+      <div class="card mb-3 shadow-sm" style="width: 100%;">
+        <img class="card-img-top" [src]="character.image" [alt]="character.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ character.name }}</h5>
+          <div class="card-text">
+            <!-- <p><strong>Alternate Names:</strong> {{ character.alternate_names.join(', ') }}</p> -->
+            <!-- <p><strong>Espèce:</strong> {{ character.species }}</p>
+                <p><strong>Genre:</strong> {{ character.gender }}</p> -->
+            <p><strong>House:</strong> {{ character.house }}</p>
+            <!-- <p><strong>Naissance:</strong> {{ character.dateOfBirth }}</p>
+                <p><strong>Ancestry:</strong> {{ character.ancestry }}</p>
+                <p><strong>Eye Colour:</strong> {{ character.eyeColour }}</p>
+                <p><strong>Hair Colour:</strong> {{ character.hairColour }}</p> -->
+            <!-- <p><strong>Wand:</strong> {{ character.wand.wood }}, {{ character.wand.core }},
+                  {{ character.wand.length }} inches</p>
+                <p><strong>Patronus:</strong> {{ character.patronus }}</p>
+                <p><strong>Hogwarts Student:</strong> {{ character.hogwartsStudent ? 'Yes' : 'No' }}</p>
+                <p><strong>Hogwarts Staff:</strong> {{ character.hogwartsStaff ? 'Yes' : 'No' }}</p>
+                <p><strong>Actor:</strong> {{ character.actor }}</p>
+                <p><strong>Alive:</strong> {{ character.alive ? 'Yes' : 'No' }}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
