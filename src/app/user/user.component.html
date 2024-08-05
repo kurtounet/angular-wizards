@@ -1,0 +1,11 @@
+<div>
+  <h1>liste des utilisateurs</h1>
+  @for(user of allUsers$ | async; track $index ){
+  <div>
+    <p>{{user.name}}</p>
+    <p>{{user.username}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.phone}}</p>
+  </div>
+  }
+</div>
