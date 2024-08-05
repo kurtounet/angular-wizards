@@ -12,7 +12,7 @@ export class CallApiService {
   http = inject(HttpClient);
   baseApi= environment.baseApi;
   getAllCharacters(): Observable<Icharacters[]> {
-    return this.http.get<Icharacters[]>(`${this.baseApi}${'character'}`).pipe(
+    return this.http.get<Icharacters[]>(`${this.baseApi}${'characters'}`).pipe(
       catchError(this.handleError)
     );
   }
